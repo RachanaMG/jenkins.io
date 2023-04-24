@@ -21,6 +21,8 @@ WORKDIR /usr/src/jenkinsio
 
 COPY Makefile Gemfile Gemfile.lock ./
 RUN bundle install
+RUN sudo apt-get update
+
 
 COPY scripts scripts
 COPY content content
